@@ -9,7 +9,7 @@ const Step = ({ service, index }) => {
         <span className="hidden md:block">{index + 1}</span>
       </div>
       <div className="flex-1 ml-0 md:ml-4 lg:ml-6 mt-4 md:mt-0 text-center md:text-left">
-        <h3 className="text-xl font-bold mb-4">{service.service_package}</h3>
+        <h3 className="text-xl font-bold mb-4">{service.main_heading}</h3>
         <p className="text-gray-700 mb-4">Description</p>
 
         <StepCard service={service} index={service.id}/>
