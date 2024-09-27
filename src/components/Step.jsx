@@ -14,7 +14,7 @@ const Step = ({ service, index }) => {
 
         <StepCard service={service} index={service.id}/>
       </div>
-      {index < 3 && (
+      {index < 11 && (
         <div className="hidden md:block absolute left-1/2 md:left-5 lg:left-5 transform -translate-x-1/2 md:translate-x-0 top-10 md:bottom-0 h-10 md:h-full w-1 bg-gray-300"></div>
       )}
     </div>
