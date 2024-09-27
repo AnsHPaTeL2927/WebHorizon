@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 // Sample data for the catalog cards, including image URLs
 const catalogItems = [
-  { id: 1, title: 'Periodic Service', imgUrl: 'https://via.placeholder.com/150?text=Periodic+Service' },
-  { id: 2, title: 'AC Repair & Service', imgUrl: 'https://via.placeholder.com/150?text=AC+Repair' },
-  { id: 3, title: 'Batteries', imgUrl: 'https://via.placeholder.com/150?text=Batteries' },
-  { id: 4, title: 'Tyres & Wheel Care', imgUrl: 'https://via.placeholder.com/150?text=Tyres+%26+Wheel+Care' },
-  { id: 5, title: 'Denting & Painting', imgUrl: 'https://via.placeholder.com/150?text=Denting+and+Painting' },
-  { id: 6, title: 'Detailing Services', imgUrl: 'https://via.placeholder.com/150?text=Detailing+Services' },
-  { id: 7, title: 'Car Spa & Cleaning', imgUrl: 'https://via.placeholder.com/150?text=Car+Spa' },
-  { id: 8, title: 'Car Inspections', imgUrl: 'https://via.placeholder.com/150?text=Car+Inspections' },
-  { id: 9, title: 'Wind Shields & Lights', imgUrl: 'https://via.placeholder.com/150?text=Wind+Shields+and+Lights' },
-  { id: 10, title: 'Suspension & Fitments', imgUrl: 'https://via.placeholder.com/150?text=Suspension+and+Fitments' },
-  { id: 11, title: 'Clutch & Body Parts', imgUrl: 'https://via.placeholder.com/150?text=Clutch+and+Body+Parts' },
-  { id: 12, title: 'Insurance Claims', imgUrl: 'https://via.placeholder.com/150?text=Insurance+Claims' },
+  { id: 1, title: 'Periodic Service', imgUrl: 'public/images/PERIODIC SERVICES.png' },
+  { id: 2, title: 'AC Repair & Service', imgUrl: 'public/images/AC SERVICE.png' },
+  { id: 3, title: 'Batteries', imgUrl: 'public/images/BATTERIES.png' },
+  { id: 4, title: 'Tyres & Wheel Care', imgUrl: 'public/images/TYRE CARE.png' },
+  { id: 5, title: 'Denting & Painting', imgUrl: 'public/images/DENTING & PAINTING.png' },
+  { id: 6, title: 'Detailing Services', imgUrl: 'public/images/DETAILING SERVICE.png' },
+  { id: 7, title: 'Car Spa & Cleaning', imgUrl: 'public/images/CAR SPA & CLEANING.png' },
+  { id: 8, title: 'Car Inspections', imgUrl: 'public/images/CAR INSPECTION.png' },
+  { id: 9, title: 'Wind Shields & Lights', imgUrl: 'public/images/WINDSHELDS & LIGHTS.png' },
+  { id: 10, title: 'Suspension & Fitments', imgUrl: 'public/images/SUSPENSION & FITMENT.png' },
+  { id: 11, title: 'Clutch & Body Parts', imgUrl: 'public/images/CLUTCH & BODY PARTS.png' },
+  { id: 12, title: 'Insurance Claims', imgUrl:'public/images/INSURANCE CLAIM.png' },
 ];
 
 // Carousel component that displays catalog items in groups of 6

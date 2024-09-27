@@ -8,6 +8,12 @@ import Catalogs from "./pages/Catalogs";
 import Services from "./pages/Services";
 import Payment from "./pages/Payment";
 import ContactUs from "./pages/ContactUs";
+import Login from "./pages/Login";
+import Signup from "./pages/Login";
+
+
+
+
 
 function App() {
   return (
@@ -21,6 +27,9 @@ function App() {
           <Route path="/service" element={<Services></Services>}></Route>
           <Route path="/payment" element={<Payment></Payment>}></Route>
           <Route path="/contact" element={<ContactUs></ContactUs>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/signup" element={<Signup></Signup>}></Route>
+
         </Routes>
       </BrowserRouter>
     </>
