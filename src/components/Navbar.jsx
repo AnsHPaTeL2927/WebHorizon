@@ -11,7 +11,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="public/Vroom_care-removebg-preview (1).png"
+              src="/Vroom_care-removebg-preview (1).png"
               className="h-20 w-30"
               alt="Vroom Logo"
             />

@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 // Sample data for the catalog cards, including image URLs
 const catalogItems = [
-  { id: 1, title: 'Periodic Service', imgUrl: 'public/images/PERIODIC SERVICES.png' },
-  { id: 2, title: 'AC Repair & Service', imgUrl: 'public/images/AC SERVICE.png' },
-  { id: 3, title: 'Batteries', imgUrl: 'public/images/BATTERIES.png' },
-  { id: 4, title: 'Tyres & Wheel Care', imgUrl: 'public/images/TYRE CARE.png' },
-  { id: 5, title: 'Denting & Painting', imgUrl: 'public/images/DENTING & PAINTING.png' },
-  { id: 6, title: 'Detailing Services', imgUrl: 'public/images/DETAILING SERVICE.png' },
-  { id: 7, title: 'Car Spa & Cleaning', imgUrl: 'public/images/CAR SPA & CLEANING.png' },
-  { id: 8, title: 'Car Inspections', imgUrl: 'public/images/CAR INSPECTION.png' },
-  { id: 9, title: 'Wind Shields & Lights', imgUrl: 'public/images/WINDSHELDS & LIGHTS.png' },
-  { id: 10, title: 'Suspension & Fitments', imgUrl: 'public/images/SUSPENSION & FITMENT.png' },
-  { id: 11, title: 'Clutch & Body Parts', imgUrl: 'public/images/CLUTCH & BODY PARTS.png' },
-  { id: 12, title: 'Insurance Claims', imgUrl:'public/images/INSURANCE CLAIM.png' },
+  { id: 1, title: 'Periodic Service', imgUrl: 'images/PERIODIC SERVICES.png' },
+  { id: 2, title: 'AC Repair & Service', imgUrl: 'images/AC SERVICE.png' },
+  { id: 3, title: 'Batteries', imgUrl: 'images/BATTERIES.png' },
+  { id: 4, title: 'Tyres & Wheel Care', imgUrl: 'images/TYRE CARE.png' },
+  { id: 5, title: 'Denting & Painting', imgUrl: 'images/DENTING & PAINTING.png' },
+  { id: 6, title: 'Detailing Services', imgUrl: 'images/DETAILING SERVICE.png' },
+  { id: 7, title: 'Car Spa & Cleaning', imgUrl: 'images/CAR SPA & CLEANING.png' },
+  { id: 8, title: 'Car Inspections', imgUrl: 'images/CAR INSPECTION.png' },
+  { id: 9, title: 'Wind Shields & Lights', imgUrl: 'images/WINDSHELDS & LIGHTS.png' },
+  { id: 10, title: 'Suspension & Fitments', imgUrl: 'images/SUSPENSION & FITMENT.png' },
+  { id: 11, title: 'Clutch & Body Parts', imgUrl: 'images/CLUTCH & BODY PARTS.png' },
+  { id: 12, title: 'Insurance Claims', imgUrl:'images/INSURANCE CLAIM.png' },
 ];
 
 // Carousel component that displays catalog items in groups of 6
