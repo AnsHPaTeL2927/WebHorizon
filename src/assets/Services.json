@@ -1,0 +1,76 @@
+{
+    "catalogItems": [
+        {
+            "id": 1,
+            "title": "Periodic Service",
+            "imgUrl": "images/PERIODIC SERVICES.png",
+            "link": "/services/periodic-service"
+        },
+        {
+            "id": 2,
+            "title": "AC Repair & Service",
+            "imgUrl": "images/AC SERVICE.png",
+            "link": "/services/ac-repair"
+        },
+        {
+            "id": 3,
+            "title": "Batteries",
+            "imgUrl": "images/BATTERIES.png",
+            "link": "/services/batteries"
+        },
+        {
+            "id": 4,
+            "title": "Tyres & Wheel Care",
+            "imgUrl": "images/TYRE CARE.png",
+            "link": "/services/tyres"
+        },
+        {
+            "id": 5,
+            "title": "Denting & Painting",
+            "imgUrl": "images/DENTING & PAINTING.png",
+            "link": "/services/denting-painting"
+        },
+        {
+            "id": 6,
+            "title": "Detailing Services",
+            "imgUrl": "images/DETAILING SERVICE.png",
+            "link": "/services/detailing"
+        },
+        {
+            "id": 7,
+            "title": "Car Spa & Cleaning",
+            "imgUrl": "images/CAR SPA & CLEANING.png",
+            "link": "/services/car-spa"
+        },
+        {
+            "id": 8,
+            "title": "Car Inspections",
+            "imgUrl": "images/CAR INSPECTION.png",
+            "link": "/services/inspections"
+        },
+        {
+            "id": 9,
+            "title": "Wind Shields & Lights",
+            "imgUrl": "images/WINDSHELDS & LIGHTS.png",
+            "link": "/services/windshields-lights"
+        },
+        {
+            "id": 10,
+            "title": "Suspension & Fitments",
+            "imgUrl": "images/SUSPENSION & FITMENT.png",
+            "link": "/services/suspension"
+        },
+        {
+            "id": 11,
+            "title": "Clutch & Body Parts",
+            "imgUrl": "images/CLUTCH & BODY PARTS.png",
+            "link": "/services/clutch-body"
+        },
+        {
+            "id": 12,
+            "title": "Insurance Claims",
+            "imgUrl": "images/INSURANCE CLAIM.png",
+            "link": "/services/insurance"
+        }
+    ]
+}

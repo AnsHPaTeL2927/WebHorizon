@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Login";
 import Footer from "./components/Footer";
 import AddToCart from "./pages/AddToCart";
+import SingleServicePage from "./pages/SingleServicePage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/rating" element={<Ratings></Ratings>}></Route>
           <Route path="/catalog" element={<Catalogs></Catalogs>}></Route>
@@ -28,6 +30,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path="/addToCart" element={<AddToCart/>} />
+          <Route path="/home/services/:id" element={<SingleServicePage/>} />
         </Routes>
       </BrowserRouter>
     </>
