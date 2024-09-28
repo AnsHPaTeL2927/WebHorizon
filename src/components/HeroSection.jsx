@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen overflow-hidden">
       <img
-        src="public/images/HERO SECTION IMAGE.jpeg" 
+        src="images/HERO SECTION IMAGE.jpeg" 
         alt="Hero Section Image"
         className="absolute inset-0 h-full w-auto"
         style={{ width: "2000px" }}

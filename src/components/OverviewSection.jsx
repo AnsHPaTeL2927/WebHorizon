@@ -8,7 +8,7 @@ const Overview = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
           <img
-             src="public/images/OVERVIEW IMG_1.jpeg"
+             src="images/OVERVIEW IMG_1.jpeg"
              alt="Car being repaired"
             className="rounded-lg object-cover w-[700px] h-[490px]"
           />
@@ -39,7 +39,7 @@ const Overview = () => {
         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
           <div className="w-full md:w-1/2">
             <img
-              src="public/images/OVERVIEW IMG-2.jpeg"
+              src="images/OVERVIEW IMG-2.jpeg"
               alt="Happy customer with car"
               className="rounded-lg object-cover w-[700px] h-[490px]"            />
           </div>
@@ -67,7 +67,7 @@ const Overview = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
             <img
-              src="public/images/OVERVIEW IMG-3.jpeg"
+              src="images/OVERVIEW IMG-3.jpeg"
               alt="Mechanic working on a car"
               className="rounded-lg object-cover w-[700px] h-[490px]"
             />
