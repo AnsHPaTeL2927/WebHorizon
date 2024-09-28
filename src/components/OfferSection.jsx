@@ -21,7 +21,7 @@ export default function OfferSection() {
         <div className="bg-gray-800 text-white rounded-lg shadow-md h-64 flex flex-col justify-between p-4">
           <h2 className="text-xl font-bold">Flat 20% Off on AC Repairs</h2>
           <img 
-            src="public/images/OFFER-1 OFF.jpg" 
+            src="images/OFFER-1 OFF.jpg" 
             alt="AC Repair Offer" 
             className="w-full h-24 object-cover rounded-md my-2" 
           />
@@ -34,7 +34,7 @@ export default function OfferSection() {
         <div className="bg-gray-800 text-white rounded-lg shadow-md h-64 flex flex-col justify-between p-4">
           <h2 className="text-xl font-bold">Tyre & Wheel Care Combo</h2>
           <img 
-            src="public/images/OFFER-1.jpg" 
+            src="images/OFFER-1.jpg" 
             alt="Tyre and Wheel Care Combo" 
             className="w-full h-24 object-cover rounded-md my-2" 
           />
