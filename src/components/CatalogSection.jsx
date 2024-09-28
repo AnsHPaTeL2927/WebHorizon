@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 // Sample data for the catalog cards, including image URLs and placeholder links
 const catalogItems = [
@@ -32,8 +33,8 @@ const Carousel = () => {
         <div className="flex space-x-4 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 transition duration-700 ease-in-out">
           {/* Display current group of items, only one item per view on small screens */}
           {catalogItems.slice(currentGroup * 6, currentGroup * 6 + 6).map((item) => (
-            <a
-              href={item.link}
+            <NavLink
+              to={`/home/services/${item.id}`}
               key={item.id}
               className="border border-gray-300 rounded-lg p-4 shadow-md min-w-full sm:min-w-0 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
             >
@@ -44,7 +45,7 @@ const Carousel = () => {
                 alt={item.title}
                 className="w-full h-auto object-cover rounded mt-2"
               />
-            </a>
+            </NavLink>
           ))}
         </div>
       </div>
