@@ -14,7 +14,6 @@ export default function Home() {
         <OverviewSection/>
         <OfferSection/>
         <ReviewSection/>
-        <Footer/>
     </>
     
   )
