@@ -8,9 +8,9 @@ export default function OfferSection() {
         <div className="bg-gray-800 text-white rounded-lg shadow-md h-64 flex flex-col justify-between p-4">
           <h2 className="text-xl font-bold">Free Oil Change</h2>
           <img 
-            src="images/oil-change.jpg" 
+            src="images/offers.png" 
             alt="Free Oil Change" 
-            className="w-full h-24 object-cover rounded-md my-2" 
+            className="w-100 h-20 object-cover rounded-md my-2" 
           />
           <p>Get a complimentary oil change with any periodic service booking. Keep your engine running smoothly!</p>
         </div>

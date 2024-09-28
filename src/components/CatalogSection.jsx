@@ -17,42 +17,35 @@ const catalogItems = [
   { id: 12, title: 'Insurance Claims', imgUrl: 'images/INSURANCE CLAIM.png', link: '/services/insurance' },
 ];
 
-// Carousel component that displays catalog items in groups of 6
+// Carousel component that displays catalog items in a responsive manner
 const Carousel = () => {
   const [currentGroup, setCurrentGroup] = React.useState(0); // Track the current group (0 or 1)
-  const itemsPerGroup = 6;
-  const groups = [
-    catalogItems.slice(0, itemsPerGroup),  // First group of 6 items
-    catalogItems.slice(itemsPerGroup),     // Second group of 6 items
-  ];
 
   // Function to switch between groups
-  const handleNext = () => setCurrentGroup((currentGroup + 1) % groups.length);
-  const handlePrev = () => setCurrentGroup((currentGroup - 1 + groups.length) % groups.length);
+  const handleNext = () => setCurrentGroup((currentGroup + 1) % Math.ceil(catalogItems.length / 6));
+  const handlePrev = () => setCurrentGroup((currentGroup - 1 + Math.ceil(catalogItems.length / 6)) % Math.ceil(catalogItems.length / 6));
 
   return (
-    <div id="carousel" className="relative w-full">
+    <div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
       <div className="relative overflow-hidden rounded-lg">
-        <div className="flex transition duration-700 ease-in-out">
-          {/* Display current group of items */}
-          <div className="flex w-full justify-between p-4 mb-12">
-            {groups[currentGroup].map((item) => (
-              <a
-                href={item.link}
-                key={item.id}
-                className="border border-gray-300 rounded-lg p-4 shadow-md w-48 mr-4 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
-                style={{ transition: 'box-shadow 0.3s ease, transform 0.3s ease' }} // Extra smooth hover transition
-              >
-                <h3 className="font-semibold text-center">{item.title}</h3>
-                {/* Image for each item */}
-                <img
-                  src={item.imgUrl}
-                  alt={item.title}
-                  className="w-full h-32 object-cover rounded mt-2"
-                />
-              </a>
-            ))}
-          </div>
+        {/* Flexbox-based responsive layout */}
+        <div className="flex space-x-4 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 transition duration-700 ease-in-out">
+          {/* Display current group of items, only one item per view on small screens */}
+          {catalogItems.slice(currentGroup * 6, currentGroup * 6 + 6).map((item) => (
+            <a
+              href={item.link}
+              key={item.id}
+              className="border border-gray-300 rounded-lg p-4 shadow-md min-w-full sm:min-w-0 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
+            >
+              <h3 className="font-semibold text-center">{item.title}</h3>
+              {/* Image for each item */}
+              <img
+                src={item.imgUrl}
+                alt={item.title}
+                className="w-full h-auto object-cover rounded mt-2"
+              />
+            </a>
+          ))}
         </div>
       </div>
 
