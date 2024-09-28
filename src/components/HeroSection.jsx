@@ -4,9 +4,10 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen overflow-hidden">
       <img
-        src="images/hero section.PNG" // replace with your image path
+        src="public/images/HERO SECTION IMAGE.jpeg" 
         alt="Hero Section Image"
         className="absolute inset-0 h-full w-auto"
+        style={{ width: "2000px" }}
       />
       {/* Optional: Add dark overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -20,10 +21,10 @@ export default function HeroSection() {
         </p>
         <div>
           <a
-            href="#"
+            href="/service"
             className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300"
           >
-            Book Now
+            SERVICES
             <svg
               className="w-5 h-5 ml-2 -mr-1"
               fill="currentColor"
@@ -38,10 +39,10 @@ export default function HeroSection() {
             </svg>
           </a>
           <a
-            href="#"
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            href="/contact"
+             className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300"
           >
-            Services
+            CONTACT US 
           </a>
         </div>
       </div>

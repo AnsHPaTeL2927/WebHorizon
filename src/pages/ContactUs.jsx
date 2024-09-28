@@ -36,6 +36,7 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-8">
+      {/* <HeadingComponent fromPage={"Home"} currentPage={"Contact"} heading={"Contact Us"} /> */}
       <div className="w-full max-w-4xl bg-gray-100 p-8 rounded-lg shadow-md">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
         <p className="text-center text-gray-600 mb-12">
