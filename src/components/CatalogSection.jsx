@@ -31,11 +31,11 @@ const Carousel = () => {
   const handlePrev = () => setCurrentGroup((currentGroup - 1 + groups.length) % groups.length);
 
   return (
-    <div id="carousel" className="relative w-full">
-      <div className="relative overflow-hidden rounded-lg">
-        <div className="flex transition duration-700 ease-in-out">
-          {/* Display current group of items */}
-          <div className="flex w-full justify-between p-4 mb-12">
+<div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
+  <div className="relative overflow-hidden rounded-lg">
+    <div className="flex transition duration-700 ease-in-out">
+      {/* Display current group of items */}
+      <div className="flex w-full justify-start p-0 mb-0">
             {groups[currentGroup].map((item) => (
               <a
                 href={item.link}
