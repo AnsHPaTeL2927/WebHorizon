@@ -17,42 +17,44 @@ const catalogItems = [
   { id: 12, title: 'Insurance Claims', imgUrl: 'images/INSURANCE CLAIM.png', link: '/services/insurance' },
 ];
 
-// Carousel component that displays catalog items in groups of 6
+// Carousel component that displays catalog items
 const Carousel = () => {
   const [currentGroup, setCurrentGroup] = React.useState(0); // Track the current group (0 or 1)
-  const itemsPerGroup = 6;
-  const groups = [
-    catalogItems.slice(0, itemsPerGroup),  // First group of 6 items
-    catalogItems.slice(itemsPerGroup),     // Second group of 6 items
-  ];
+
+  // Dynamic number of items per row based on screen size using CSS grid
+  const getGridCols = () => {
+    if (window.innerWidth >= 1280) return 'grid-cols-6'; // XL: 6 items
+    if (window.innerWidth >= 1024) return 'grid-cols-4'; // LG: 4 items
+    if (window.innerWidth >= 768) return 'grid-cols-3';  // MD: 3 items
+    return 'grid-cols-2'; // SM and below: 2 items
+  };
+
+  const gridCols = getGridCols();
 
   // Function to switch between groups
-  const handleNext = () => setCurrentGroup((currentGroup + 1) % groups.length);
-  const handlePrev = () => setCurrentGroup((currentGroup - 1 + groups.length) % groups.length);
+  const handleNext = () => setCurrentGroup((currentGroup + 1) % Math.ceil(catalogItems.length / 6));
+  const handlePrev = () => setCurrentGroup((currentGroup - 1 + Math.ceil(catalogItems.length / 6)) % Math.ceil(catalogItems.length / 6));
 
   return (
-<div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
-  <div className="relative overflow-hidden rounded-lg">
-    <div className="flex transition duration-700 ease-in-out">
-      {/* Display current group of items */}
-      <div className="flex w-full justify-start p-0 mb-0">
-            {groups[currentGroup].map((item) => (
-              <a
-                href={item.link}
-                key={item.id}
-                className="border border-gray-300 rounded-lg p-4 shadow-md w-48 mr-4 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
-                style={{ transition: 'box-shadow 0.3s ease, transform 0.3s ease' }} // Extra smooth hover transition
-              >
-                <h3 className="font-semibold text-center">{item.title}</h3>
-                {/* Image for each item */}
-                <img
-                  src={item.imgUrl}
-                  alt={item.title}
-                  className="w-full h-32 object-cover rounded mt-2"
-                />
-              </a>
-            ))}
-          </div>
+    <div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
+      <div className="relative overflow-hidden rounded-lg">
+        <div className={`grid ${gridCols} gap-4 transition duration-700 ease-in-out`}>
+          {/* Display current group of items */}
+          {catalogItems.slice(currentGroup * 6, currentGroup * 6 + 6).map((item) => (
+            <a
+              href={item.link}
+              key={item.id}
+              className="border border-gray-300 rounded-lg p-4 shadow-md transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
+            >
+              <h3 className="font-semibold text-center">{item.title}</h3>
+              {/* Image for each item */}
+              <img
+                src={item.imgUrl}
+                alt={item.title}
+                className="w-full h-auto object-cover rounded mt-2"
+              />
+            </a>
+          ))}
         </div>
       </div>
 
