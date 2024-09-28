@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
 // Sample data for the catalog cards, including image URLs and placeholder links
 const catalogItems = [
@@ -27,28 +26,26 @@ const Carousel = () => {
   const handlePrev = () => setCurrentGroup((currentGroup - 1 + Math.ceil(catalogItems.length / 6)) % Math.ceil(catalogItems.length / 6));
 
   return (
-<div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
-  <div className="relative overflow-hidden rounded-lg">
-    <div className="flex transition duration-700 ease-in-out">
-      {/* Display current group of items */}
-      <div className="flex w-full justify-start p-0 mb-0">
-        {catalogItems.slice(currentGroup * 6, currentGroup * 6 + 6).map((item) => (
-              <NavLink
-                to={`home/services/${item.id}`}
-                key={item.id}
-                className="border border-gray-300 rounded-lg p-4 shadow-md w-48 mr-4 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
-                style={{ transition: 'box-shadow 0.3s ease, transform 0.3s ease' }} // Extra smooth hover transition
-              >
-                <h3 className="font-semibold text-center">{item.title}</h3>
-                {/* Image for each item */}
-                <img
-                  src={item.imgUrl}
-                  alt={item.title}
-                  className="w-full h-32 object-cover rounded mt-2"
-                />
-              </NavLink>
-            ))}
-          </div>
+    <div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
+      <div className="relative overflow-hidden rounded-lg">
+        {/* Flexbox-based responsive layout */}
+        <div className="flex space-x-4 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 transition duration-700 ease-in-out">
+          {/* Display current group of items, only one item per view on small screens */}
+          {catalogItems.slice(currentGroup * 6, currentGroup * 6 + 6).map((item) => (
+            <a
+              href={item.link}
+              key={item.id}
+              className="border border-gray-300 rounded-lg p-4 shadow-md min-w-full sm:min-w-0 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
+            >
+              <h3 className="font-semibold text-center">{item.title}</h3>
+              {/* Image for each item */}
+              <img
+                src={item.imgUrl}
+                alt={item.title}
+                className="w-full h-auto object-cover rounded mt-2"
+              />
+            </a>
+          ))}
         </div>
       </div>
 
