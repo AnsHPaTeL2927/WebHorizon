@@ -9,7 +9,6 @@ import Services from "./pages/Services";
 import Payment from "./pages/Payment";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
-import Signup from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 import AddToCart from "./pages/AddToCart";
