@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 export default {
   content: [
     "./index.html",
@@ -60,5 +61,5 @@ export default {
       }
     }
   },
-  plugins: [],
+  plugins: [new BundleAnalyzerPlugin()]
 }
