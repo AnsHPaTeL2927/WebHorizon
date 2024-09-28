@@ -37,7 +37,6 @@ const MultiStepModal = ({
       selectedFuelType: fuelType,
     };
     addToCart(serviceDetails);
-    // Close the modal after selecting the fuel type
     onClose();
   };
 

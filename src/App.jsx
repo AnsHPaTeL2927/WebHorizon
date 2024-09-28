@@ -10,10 +10,7 @@ import Payment from "./pages/Payment";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Signup from "./pages/Login";
-
-
-
-
+import AddToCart from "./pages/AddToCart";
 
 function App() {
   return (
@@ -29,7 +26,7 @@ function App() {
           <Route path="/contact" element={<ContactUs></ContactUs>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
-
+          <Route path="/addToCart" element={<AddToCart/>} />
         </Routes>
       </BrowserRouter>
     </>

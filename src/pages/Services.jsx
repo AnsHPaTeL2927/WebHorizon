@@ -10,11 +10,9 @@ export default function Services() {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
   const [selectedFuelType, setSelectedFuelType] = useState(null);
-  const [cart, setCart] = useState([]);
-
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []); // Load cart from localStorage
 
   const services = [
-    // Sample service data
     {
       id: 1,
       main_heading: "Regular AC Service",
@@ -71,24 +69,6 @@ export default function Services() {
     },
     {
       id: 4,
-      main_heading: "Regular AC Service",
-      description: "Comprehensive AC service including vent cleaning, gas refill, and inspection.",
-      free_offer: "FREE AC UNIT INSPECTION",
-      previous_price: 3132,
-      current_price: 2349,
-      tasks: [
-        { name: "AC Vent Cleaning", completed: true },
-        { name: "AC Gas (upto 400 gms)", completed: true },
-        { name: "AC Filter Cleaning", completed: true },
-        { name: "AC Inspection", completed: true },
-        { name: "Condenser Cleaning", completed: true },
-      ],
-      duration: "Takes 4 hours",
-      warranty: "500 Kms or 1 Month Warranty",
-      recommendation: "Every 5,000 Kms or 3 Months",
-    },
-    {
-      id: 5,
       main_heading: "Regular AC Service",
       description: "Comprehensive AC service including vent cleaning, gas refill, and inspection.",
       free_offer: "FREE AC UNIT INSPECTION",
@@ -226,6 +206,8 @@ export default function Services() {
         { name: "AC Filter Cleaning", completed: true },
         { name: "AC Inspection", completed: true },
         { name: "Condenser Cleaning", completed: true },
+        { name: "Condenser Cleaning", completed: true },
+        { name: "Condenser Cleaning", completed: true },
       ],
       duration: "Takes 4 hours",
       warranty: "500 Kms or 1 Month Warranty",
@@ -256,7 +238,9 @@ export default function Services() {
   };
 
   const handleAddToCart = (serviceDetails) => {
-    setCart([...cart, serviceDetails]);
+    const updatedCart = [...cart, serviceDetails];
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save cart to localStorage
     handleCloseModal();
   };
 
@@ -287,17 +271,6 @@ export default function Services() {
           addToCart={handleAddToCart}
         />
       )}
-
-      <div className="cart">
-        <h3>Cart</h3>
-        <ul>
-          {cart.map((item, idx) => (
-            <li key={idx}>
-              {item.service.main_heading}: {item.selectedCompany} - {item.selectedModel} - {item.selectedFuelType}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

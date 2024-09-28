@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function HeadingComponent(page) {
-    console.log(page.fromPage)
     return (
         <>
             <nav className="max-w-4xl mx-auto relative" aria-label="Breadcrumb">
@@ -49,7 +48,7 @@ export default function HeadingComponent(page) {
                 </ol>
             </nav>
             <h2 className=" max-w-4xl mx-auto relative mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl dark:text-black">
-                Services
+                {page.heading}
             </h2>
         </>
     );
