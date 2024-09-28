@@ -9,8 +9,11 @@ import Services from "./pages/Services";
 import Payment from "./pages/Payment";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
+import Signup from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
+import AddToCart from "./pages/AddToCart";
+
 
 
 
@@ -29,7 +32,7 @@ function App() {
           <Route path="/contact" element={<ContactUs></ContactUs>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
-
+          <Route path="/addToCart" element={<AddToCart/>} />
         </Routes>
       </BrowserRouter>
     </>
