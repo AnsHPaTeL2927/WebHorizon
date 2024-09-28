@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Sample data for the catalog cards, including image URLs
+// Sample data for the catalog cards, including image URLs and placeholder links
 const catalogItems = [
-  { id: 1, title: 'Periodic Service', imgUrl: 'images/PERIODIC SERVICES.png' },
-  { id: 2, title: 'AC Repair & Service', imgUrl: 'images/AC SERVICE.png' },
-  { id: 3, title: 'Batteries', imgUrl: 'images/BATTERIES.png' },
-  { id: 4, title: 'Tyres & Wheel Care', imgUrl: 'images/TYRE CARE.png' },
-  { id: 5, title: 'Denting & Painting', imgUrl: 'images/DENTING & PAINTING.png' },
-  { id: 6, title: 'Detailing Services', imgUrl: 'images/DETAILING SERVICE.png' },
-  { id: 7, title: 'Car Spa & Cleaning', imgUrl: 'images/CAR SPA & CLEANING.png' },
-  { id: 8, title: 'Car Inspections', imgUrl: 'images/CAR INSPECTION.png' },
-  { id: 9, title: 'Wind Shields & Lights', imgUrl: 'images/WINDSHELDS & LIGHTS.png' },
-  { id: 10, title: 'Suspension & Fitments', imgUrl: 'images/SUSPENSION & FITMENT.png' },
-  { id: 11, title: 'Clutch & Body Parts', imgUrl: 'images/CLUTCH & BODY PARTS.png' },
-  { id: 12, title: 'Insurance Claims', imgUrl:'images/INSURANCE CLAIM.png' },
+  { id: 1, title: 'Periodic Service', imgUrl: 'images/PERIODIC SERVICES.png', link: '/services/periodic-service' },
+  { id: 2, title: 'AC Repair & Service', imgUrl: 'images/AC SERVICE.png', link: '/services/ac-repair' },
+  { id: 3, title: 'Batteries', imgUrl: 'images/BATTERIES.png', link: '/services/batteries' },
+  { id: 4, title: 'Tyres & Wheel Care', imgUrl: 'images/TYRE CARE.png', link: '/services/tyres' },
+  { id: 5, title: 'Denting & Painting', imgUrl: 'images/DENTING & PAINTING.png', link: '/services/denting-painting' },
+  { id: 6, title: 'Detailing Services', imgUrl: 'images/DETAILING SERVICE.png', link: '/services/detailing' },
+  { id: 7, title: 'Car Spa & Cleaning', imgUrl: 'images/CAR SPA & CLEANING.png', link: '/services/car-spa' },
+  { id: 8, title: 'Car Inspections', imgUrl: 'images/CAR INSPECTION.png', link: '/services/inspections' },
+  { id: 9, title: 'Wind Shields & Lights', imgUrl: 'images/WINDSHELDS & LIGHTS.png', link: '/services/windshields-lights' },
+  { id: 10, title: 'Suspension & Fitments', imgUrl: 'images/SUSPENSION & FITMENT.png', link: '/services/suspension' },
+  { id: 11, title: 'Clutch & Body Parts', imgUrl: 'images/CLUTCH & BODY PARTS.png', link: '/services/clutch-body' },
+  { id: 12, title: 'Insurance Claims', imgUrl: 'images/INSURANCE CLAIM.png', link: '/services/insurance' },
 ];
 
 // Carousel component that displays catalog items in groups of 6
@@ -36,12 +36,21 @@ const Carousel = () => {
         <div className="flex transition duration-700 ease-in-out">
           {/* Display current group of items */}
           <div className="flex w-full justify-between p-4 mb-12">
-            {groups[currentGroup].map(item => (
-              <div key={item.id} className="border border-gray-300 rounded-lg p-4 shadow-md w-48 mr-4">
+            {groups[currentGroup].map((item) => (
+              <a
+                href={item.link}
+                key={item.id}
+                className="border border-gray-300 rounded-lg p-4 shadow-md w-48 mr-4 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
+                style={{ transition: 'box-shadow 0.3s ease, transform 0.3s ease' }} // Extra smooth hover transition
+              >
                 <h3 className="font-semibold text-center">{item.title}</h3>
                 {/* Image for each item */}
-                <img src={item.imgUrl} alt={item.title} className="w-full h-32 object-cover rounded mt-2" />
-              </div>
+                <img
+                  src={item.imgUrl}
+                  alt={item.title}
+                  className="w-full h-32 object-cover rounded mt-2"
+                />
+              </a>
             ))}
           </div>
         </div>
