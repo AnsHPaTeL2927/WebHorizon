@@ -17,19 +17,9 @@ const catalogItems = [
   { id: 12, title: 'Insurance Claims', imgUrl: 'images/INSURANCE CLAIM.png', link: '/services/insurance' },
 ];
 
-// Carousel component that displays catalog items
+// Carousel component that displays catalog items in a responsive manner
 const Carousel = () => {
   const [currentGroup, setCurrentGroup] = React.useState(0); // Track the current group (0 or 1)
-
-  // Dynamic number of items per row based on screen size using CSS grid
-  const getGridCols = () => {
-    if (window.innerWidth >= 1280) return 'grid-cols-6'; // XL: 6 items
-    if (window.innerWidth >= 1024) return 'grid-cols-4'; // LG: 4 items
-    if (window.innerWidth >= 768) return 'grid-cols-3';  // MD: 3 items
-    return 'grid-cols-2'; // SM and below: 2 items
-  };
-
-  const gridCols = getGridCols();
 
   // Function to switch between groups
   const handleNext = () => setCurrentGroup((currentGroup + 1) % Math.ceil(catalogItems.length / 6));
@@ -38,13 +28,14 @@ const Carousel = () => {
   return (
     <div id="carousel" className="relative ml-3 mr-4 items-center overflow-hidden">
       <div className="relative overflow-hidden rounded-lg">
-        <div className={`grid ${gridCols} gap-4 transition duration-700 ease-in-out`}>
-          {/* Display current group of items */}
+        {/* Flexbox-based responsive layout */}
+        <div className="flex space-x-4 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 transition duration-700 ease-in-out">
+          {/* Display current group of items, only one item per view on small screens */}
           {catalogItems.slice(currentGroup * 6, currentGroup * 6 + 6).map((item) => (
             <a
               href={item.link}
               key={item.id}
-              className="border border-gray-300 rounded-lg p-4 shadow-md transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
+              className="border border-gray-300 rounded-lg p-4 shadow-md min-w-full sm:min-w-0 transform transition duration-300 hover:border-light-blue-500 hover:shadow-xl hover:scale-105"
             >
               <h3 className="font-semibold text-center">{item.title}</h3>
               {/* Image for each item */}
