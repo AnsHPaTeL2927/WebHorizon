@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HeadingComponent from "../components/HeadingComponent";
 import Step from "../components/Step";
 import MultiStepModal from "../components/MultiStepModal";
+import SingleServicePage from './SingleServicePage';
 
 export default function Services() {
   const [showModal, setShowModal] = useState(false);
@@ -272,5 +273,16 @@ export default function Services() {
         />
       )}
     </div>
+  );
+}
+export function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:id" element={<SingleServicePage />} />
+        {/* Add other routes as needed */}
+      </Routes>
+    </Router>
   );
 }

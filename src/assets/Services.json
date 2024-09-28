@@ -3,73 +3,85 @@
         {
             "id": 1,
             "title": "Periodic Service",
-            "imgUrl": "images/PERIODIC SERVICES.png",
+            "imgUrl": "images/PERIODIC_SERVICES.png",
+            "description": "Regular maintenance to keep your vehicle in top condition.",
             "link": "/services/periodic-service"
         },
         {
             "id": 2,
             "title": "AC Repair & Service",
             "imgUrl": "images/AC SERVICE.png",
+            "description": "Expert AC repair and servicing to keep you cool.",
             "link": "/services/ac-repair"
         },
         {
             "id": 3,
             "title": "Batteries",
             "imgUrl": "images/BATTERIES.png",
+            "description": "Battery testing, replacement, and maintenance services.",
             "link": "/services/batteries"
         },
         {
             "id": 4,
             "title": "Tyres & Wheel Care",
-            "imgUrl": "images/TYRE CARE.png",
+            "imgUrl": "images/TYRE_CARE.png",
+            "description": "Tyre replacement, alignment, and maintenance services.",
             "link": "/services/tyres"
         },
         {
             "id": 5,
             "title": "Denting & Painting",
-            "imgUrl": "images/DENTING & PAINTING.png",
+            "imgUrl": "public/images/DENTING & PAINTING.png",
+            "description": "Professional dent removal and painting services.",
             "link": "/services/denting-painting"
         },
         {
             "id": 6,
             "title": "Detailing Services",
-            "imgUrl": "images/DETAILING SERVICE.png",
+            "imgUrl": "images/DETAILING_SERVICE.png",
+            "description": "Comprehensive detailing to keep your car looking new.",
             "link": "/services/detailing"
         },
         {
             "id": 7,
             "title": "Car Spa & Cleaning",
-            "imgUrl": "images/CAR SPA & CLEANING.png",
+            "imgUrl": "images/CAR_SPA_CLEANING.png",
+            "description": "Deep cleaning services to pamper your car.",
             "link": "/services/car-spa"
         },
         {
             "id": 8,
             "title": "Car Inspections",
-            "imgUrl": "images/CAR INSPECTION.png",
+            "imgUrl": "images/CAR_INSPECTION.png",
+            "description": "Thorough inspections to ensure your car's safety.",
             "link": "/services/inspections"
         },
         {
             "id": 9,
             "title": "Wind Shields & Lights",
-            "imgUrl": "images/WINDSHELDS & LIGHTS.png",
+            "imgUrl": "images/WINDSHELDS_LIGHTS.png",
+            "description": "Repair and replacement of windshields and lights.",
             "link": "/services/windshields-lights"
         },
         {
             "id": 10,
             "title": "Suspension & Fitments",
-            "imgUrl": "images/SUSPENSION & FITMENT.png",
+            "imgUrl": "images/SUSPENSION_FITMENT.png",
+            "description": "Suspension repairs and modifications for better handling.",
             "link": "/services/suspension"
         },
         {
             "id": 11,
             "title": "Clutch & Body Parts",
-            "imgUrl": "images/CLUTCH & BODY PARTS.png",
+            "imgUrl": "images/CLUTCH_BODY_PARTS.png",
+            "description": "Replacement and repair of clutch and body components.",
             "link": "/services/clutch-body"
         },
         {
             "id": 12,
             "title": "Insurance Claims",
-            "imgUrl": "images/INSURANCE CLAIM.png",
+            "imgUrl": "images/INSURANCE_CLAIM.png",
+            "description": "Assistance with insurance claims and documentation.",
             "link": "/services/insurance"
         }
     ]
