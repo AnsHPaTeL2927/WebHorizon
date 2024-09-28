@@ -32,40 +32,42 @@ export default function Services() {
       recommendation: "Every 5,000 Kms or 3 Months",
     },
     {
-      id: 2,
-      main_heading: "Regular AC Service",
-      description: "Comprehensive AC service including vent cleaning, gas refill, and inspection.",
-      free_offer: "FREE AC UNIT INSPECTION",
-      previous_price: 3132,
-      current_price: 2349,
-      tasks: [
-        { name: "AC Vent Cleaning", completed: true },
-        { name: "AC Gas (upto 400 gms)", completed: true },
-        { name: "AC Filter Cleaning", completed: true },
-        { name: "AC Inspection", completed: true },
-        { name: "Condenser Cleaning", completed: true },
+      "id": 2,
+      "main_heading": "Periodic Service",
+      "description": "Thorough service to maintain your vehicle's performance, including oil change, filter replacement, and safety checks.",
+      "free_offer": "FREE VEHICLE INSPECTION",
+      "previous_price": 4899,
+      "current_price": 3699,
+      "tasks": [
+        { "name": "Engine Oil Replacement", "completed": true },
+        { "name": "Oil Filter Change", "completed": true },
+        { "name": "Air Filter Cleaning", "completed": true },
+        { "name": "Brake Inspection", "completed": true },
+        { "name": "Fluid Top-up (Coolant, Brake Fluid)", "completed": true },
+        { "name": "Battery Health Check", "completed": true },
+        { "name": "Tyre Rotation & Pressure Check", "completed": true }
       ],
-      duration: "Takes 4 hours",
-      warranty: "500 Kms or 1 Month Warranty",
-      recommendation: "Every 5,000 Kms or 3 Months",
+      "duration": "Takes 6 hours",
+      "warranty": "1,000 Kms or 2 Months Warranty",
+      "recommendation": "Every 10,000 Kms or 6 Months"
     },
     {
-      id: 3,
-      main_heading: "Regular AC Service",
-      description: "Comprehensive AC service including vent cleaning, gas refill, and inspection.",
-      free_offer: "FREE AC UNIT INSPECTION",
-      previous_price: 3132,
-      current_price: 2349,
-      tasks: [
-        { name: "AC Vent Cleaning", completed: true },
-        { name: "AC Gas (upto 400 gms)", completed: true },
-        { name: "AC Filter Cleaning", completed: true },
-        { name: "AC Inspection", completed: true },
-        { name: "Condenser Cleaning", completed: true },
+      "id": 3,
+      "main_heading": "Battery Service",
+      "description": "Comprehensive battery health check and maintenance to ensure optimal performance and longevity.",
+      "free_offer": "FREE BATTERY INSPECTION",
+      "previous_price": 1999,
+      "current_price": 1499,
+      "tasks": [
+        { "name": "Battery Health Check", "completed": true },
+        { "name": "Terminal Cleaning", "completed": true },
+        { "name": "Battery Fluid Top-up", "completed": true },
+        { "name": "Cable Inspection & Tightening", "completed": true },
+        { "name": "Charging System Check", "completed": true }
       ],
-      duration: "Takes 4 hours",
-      warranty: "500 Kms or 1 Month Warranty",
-      recommendation: "Every 5,000 Kms or 3 Months",
+      "duration": "Takes 1 hour",
+      "warranty": "3,000 Kms or 3 Months Warranty",
+      "recommendation": "Every 12,000 Kms or 12 Months"
     },
     {
       id: 4,
@@ -246,7 +248,7 @@ export default function Services() {
 
   return (
     <div className="App px-4 py-10">
-      <HeadingComponent fromPage={"Home"} currentPage={"Services"} />
+      <HeadingComponent fromPage={"Home"} currentPage={"Services"} heading={"Services"} />
       <div className="max-w-4xl mx-auto relative">
         {services.map((service, index) => (
           <Step key={service.id} service={service} index={index} onAddToCart={handleShowModal} />

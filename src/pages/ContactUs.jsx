@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import HeadingComponent from '../components/HeadingComponent';
+// import 
 const ContactUs = () => {
   // Form state
   const [formData, setFormData] = useState({
@@ -35,12 +36,14 @@ const ContactUs = () => {
   };
 
   return (
+  <>
+    <HeadingComponent fromPage={"Home"} currentPage={"Contact"} heading={"Contact Us"} />
+
     <div className="min-h-screen bg-white flex items-center justify-center p-8">
-      {/* <HeadingComponent fromPage={"Home"} currentPage={"Contact"} heading={"Contact Us"} /> */}
       <div className="w-full max-w-4xl bg-gray-100 p-8 rounded-lg shadow-md">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
         <p className="text-center text-gray-600 mb-12">
-          We use an agile approach to test assumptions and connect with the needs of your audience early and often.
+        Reach out to us for any inquiries, appointments, or feedback. Our team is here to assist you and ensure you receive the best service. We look forward to connecting with you!
         </p>
         
         {/* Contact Form */}
@@ -147,6 +150,7 @@ const ContactUs = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

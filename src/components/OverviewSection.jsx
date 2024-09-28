@@ -7,11 +7,12 @@ const Overview = () => {
       <section className="container mx-auto px-4 py-12 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
-            <img
-              src="your-image-src-here.jpg"
-              alt="Car being repaired"
-              className="rounded-lg object-cover w-full h-auto"
-            />
+          <img
+             src="public/images/OVERVIEW IMG_1.jpeg"
+             alt="Car being repaired"
+            className="rounded-lg object-cover w-[700px] h-[490px]"
+          />
+
           </div>
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
@@ -38,10 +39,9 @@ const Overview = () => {
         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
           <div className="w-full md:w-1/2">
             <img
-              src="your-image-src-here.jpg"
+              src="public/images/OVERVIEW IMG-2.jpeg"
               alt="Happy customer with car"
-              className="rounded-lg object-cover w-full h-auto"
-            />
+              className="rounded-lg object-cover w-[700px] h-[490px]"            />
           </div>
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
@@ -67,9 +67,9 @@ const Overview = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
             <img
-              src="your-image-src-here.jpg"
+              src="public/images/OVERVIEW IMG-3.jpeg"
               alt="Mechanic working on a car"
-              className="rounded-lg object-cover w-full h-auto"
+              className="rounded-lg object-cover w-[700px] h-[490px]"
             />
           </div>
           <div className="w-full md:w-1/2 space-y-6">

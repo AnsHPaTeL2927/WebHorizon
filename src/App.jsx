@@ -32,6 +32,7 @@ function App() {
           <Route path="/addToCart" element={<AddToCart/>} />
           <Route path="/home/services/:id" element={<SingleServicePage/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

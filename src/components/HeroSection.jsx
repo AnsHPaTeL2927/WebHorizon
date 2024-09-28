@@ -14,10 +14,10 @@ export default function HeroSection() {
       {/* Centered Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-          Your Vehicle Deserves the Best. We Deliver It.
+          <b>Your Vehicle Deserves the Best. We Deliver It.</b>
         </h1>
         <p className="max-w-2xl mb-6 font-light text-gray-200 lg:mb-8 md:text-lg lg:text-xl">
-          Vroom Care is where professionalism meets perfection. Our comprehensive services ensure your vehicle gets the premium care it deserves.
+         <b><i> Vroom Care is where professionalism meets perfection. Our comprehensive services ensure your vehicle gets the premium care it deserves.</i></b>
         </p>
         <div>
           <a
